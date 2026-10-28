@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#080b18" />
+  <meta name="description" content="Bluff Battle — a real-time word deception party game." />
+  <title>Bluff Battle — The Ultimate Word Deception Game</title>
+  <style>
+    :root{color-scheme:dark;--bg:#080b18;--panel:#101529;--panel2:#151b33;--line:#272e4c;--muted:#9aa4c4;--text:#f5f6ff;--purple:#a78bfa;--cyan:#55e6ee;--green:#73e2b4;--red:#ff8192;--r:20px;font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 50% -18%,#252052 0%,transparent 42%),radial-gradient(ellipse at 100% 50%,#0d2134 0%,transparent 32%),var(--bg);color:var(--text)}button,input,textarea{font:inherit}button{cursor:pointer}.app{max-width:1100px;margin:auto;padding:28px 24px 50px}.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:50px}.brand{display:flex;gap:12px;align-items:center;font-weight:850;letter-spacing:.025em;font-size:18px}.logo{width:43px;height:43px;border:1px solid #5e4bae;background:linear-gradient(145deg,#28224c,#17172c);border-radius:14px;display:grid;place-items:center;color:var(--purple);font-size:23px;box-shadow:0 0 30px #9b76ff18}.tag{border:1px solid var(--line);border-radius:99px;padding:9px 14px;color:var(--muted);font-size:12px}.tag i{display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--green);margin-right:7px}.hero{text-align:center;margin:0 auto 38px;max-width:710px}.eyebrow{display:inline-flex;gap:7px;align-items:center;color:var(--cyan);font-size:12px;font-weight:750;letter-spacing:.13em;text-transform:uppercase}.hero h1{font-size:clamp(40px,8vw,76px);line-height:.98;letter-spacing:-.055em;margin:16px 0 17px}.gradient{background:linear-gradient(100deg,#c4a7ff 20%,#7fdbff 75%);color:transparent;background-clip:text}.hero p{color:#aeb5d1;line-height:1.65;margin:0 auto;max-width:530px;font-size:16px}.layout{display:grid;grid-template-columns:minmax(0,1fr) 310px;gap:20px;align-items:start}.card{background:linear-gradient(155deg,#13182c,#0e1325 70%);border:1px solid var(--line);border-radius:var(--r);padding:26px;box-shadow:0 20px 70px #0003}.card h2,.card h3{margin:0}.muted{color:var(--muted)}.form label{display:block;color:#d8dcf0;font-size:13px;font-weight:650;margin:18px 0 8px}.input{width:100%;background:#090d1c;border:1px solid #303653;border-radius:12px;color:var(--text);padding:14px 15px;outline:none;transition:.2s}.input:focus{border-color:#9580ee;box-shadow:0 0 0 3px #a78bfa22}.input::placeholder{color:#606987}.room-row{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:20px}.btn{border:0;border-radius:12px;padding:14px 16px;font-weight:750;color:#111326;background:linear-gradient(105deg,#c5a6ff,#6edce8);box-shadow:0 9px 26px #5e4bae2b;transition:transform .15s,filter .15s}.btn:hover{transform:translateY(-1px);filter:brightness(1.07)}.btn:disabled{opacity:.48;cursor:not-allowed;transform:none}.btn.secondary{background:#1c2240;color:#e6e8ff;border:1px solid #3b4266;box-shadow:none}.btn.small{padding:10px 13px;font-size:13px}.how{margin-top:18px;border-top:1px solid var(--line);padding-top:18px}.how h3{font-size:14px;margin-bottom:12px}.steps{display:grid;gap:11px}.step{display:grid;grid-template-columns:27px 1fr;gap:10px;color:#aeb5d1;font-size:12px;line-height:1.5}.num{width:25px;height:25px;border-radius:8px;display:grid;place-items:center;background:#262043;color:#c6b0ff;font-size:11px;font-weight:800}.score-note{margin-top:16px;padding:12px;border-radius:12px;background:#0c1d28;border:1px solid #1b4450;color:#a6dfe5;font-size:12px;line-height:1.6}.aside{display:grid;gap:16px}.aside .card{padding:21px}.aside h3{font-size:14px;margin-bottom:14px}.sample{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #252b43;font-size:12px}.sample:last-child{border:0;padding-bottom:0}.sample b{color:#e6e4ff}.sample span{color:#838daa}.footer{text-align:center;margin-top:30px;color:#626b88;font-size:11px}.hidden{display:none!important}.gamehead{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}.round-badge,.phase-badge{font-size:11px;letter-spacing:.08em;text-transform:uppercase;border:1px solid #3e3760;padding:8px 11px;border-radius:99px;color:#c4b4ff;font-weight:750}.phase-badge{color:#94e2e8;border-color:#23515a}.timer{width:74px;height:74px;display:grid;place-items:center;border-radius:50%;background:conic-gradient(var(--cyan) var(--progress,0%),#26304a 0);position:relative;font-weight:800;font-size:20px}.timer:before{content:"";position:absolute;inset:5px;border-radius:50%;background:#11172a}.timer span{position:relative}.word{text-align:center;font-size:clamp(34px,7vw,54px);letter-spacing:-.04em;margin:24px 0 8px}.hint{text-align:center;color:var(--muted);margin:0 0 24px;line-height:1.55}.gamepanel{padding:25px;background:#0b1020;border:1px solid #252c49;border-radius:16px}.gamepanel h3{font-size:15px;margin:0 0 10px}.gamepanel p{color:var(--muted);font-size:13px;line-height:1.6}.textarea{resize:vertical;min-height:105px;line-height:1.5}.row-between{display:flex;justify-content:space-between;align-items:center;gap:12px}.counter{font-size:11px;color:#737e9d}.entry-list{display:grid;gap:10px}.entry{display:flex;gap:12px;align-items:flex-start;text-align:left;width:100%;background:#131a30;color:#f0f1ff;border:1px solid #2a3452;border-radius:13px;padding:14px;transition:.15s}.entry:hover{border-color:#8171ca;background:#1a203b}.entry:disabled{cursor:default;opacity:.62}.entry-letter{flex:none;display:grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#292247;color:#d0bcff;font-weight:800;font-size:12px}.entry-text{font-size:13px;line-height:1.55}.waiting{padding:15px;border-radius:12px;background:#121a30;color:#aab4d2;font-size:13px;margin-top:15px}.reveal-real{border:1px solid #2d715f;background:#10261f;padding:16px;border-radius:14px;line-height:1.55}.reveal-real strong{display:block;color:var(--green);font-size:11px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:7px}.reveal-entry{padding:13px;background:#141a30;border:1px solid #2a3350;border-radius:12px;margin-top:9px;font-size:13px;line-height:1.5}.reveal-entry small{display:block;color:var(--muted);margin-top:8px}.leader-list{display:grid;gap:8px}.leader{display:grid;grid-template-columns:28px 1fr auto;align-items:center;gap:10px;background:#11172b;padding:11px;border-radius:11px;border:1px solid transparent}.leader:first-child{border-color:#5d4b8a;background:#1d1935}.rank{color:#8e99b6;font-weight:800;font-size:12px}.leader-name{font-size:13px;font-weight:700}.leader-score{color:var(--cyan);font-size:14px;font-weight:850}.you{font-size:10px;color:var(--purple);margin-left:5px}.players{display:grid;gap:9px}.player{display:flex;justify-content:space-between;align-items:center;font-size:13px;background:#11172b;border:1px solid #252c49;border-radius:11px;padding:11px 12px}.host{font-size:10px;color:#c2a9ff;border:1px solid #493b6d;padding:4px 7px;border-radius:99px}.codebox{display:flex;align-items:center;justify-content:space-between;background:#090d1c;border:1px dashed #514879;border-radius:13px;padding:14px 15px;margin:17px 0}.code{font-size:24px;letter-spacing:.18em;font-weight:900;color:#d3c0ff}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#311a2c;border:1px solid #774054;border-radius:12px;padding:12px 16px;color:#ffc4ce;font-size:13px;box-shadow:0 12px 30px #0008;z-index:9;max-width:90vw}.winner{text-align:center;padding:28px 15px}.trophy{font-size:46px}.winner h2{font-size:clamp(29px,6vw,45px);margin:12px 0}.winner p{color:var(--muted)}.fine{font-size:11px;color:#6d7898;line-height:1.6}.connection{color:#f3c76e}.connection.live{color:var(--green)}@media(max-width:800px){.layout{grid-template-columns:1fr}.aside{grid-template-columns:1fr 1fr}.topbar{margin-bottom:36px}}@media(max-width:540px){.app{padding:18px 14px 35px}.topbar{margin-bottom:30px}.brand{font-size:15px}.tag{font-size:10px;padding:8px}.hero{margin-bottom:26px}.hero p{font-size:14px}.card{padding:19px}.room-row{grid-template-columns:1fr}.aside{grid-template-columns:1fr}.gamehead{align-items:flex-start}.timer{width:60px;height:60px}.word{margin-top:16px}.footer{margin-top:20px}}
+    :focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+    .btn,.input{min-height:48px}.btn.small{min-height:44px}
+    .textarea{font-size:16px;min-height:120px}
+    .entry-text,.reveal-entry,.reveal-real,.waiting{overflow-wrap:anywhere}
+    .connect-status{margin:12px 0 0;color:var(--cyan);font-size:13px;line-height:1.5}
+    .connect-status:before{content:"●";margin-right:8px;animation:status-pulse 1.2s ease-in-out infinite}
+    @keyframes status-pulse{50%{opacity:.35}}
+    @media(max-width:540px){.gamehead{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:center}.phase-badge{grid-column:1;grid-row:2;justify-self:start}.timer{grid-column:2;grid-row:1/3;width:58px;height:58px}.gamepanel{padding:17px}.winner{padding:20px 8px}.row-between{flex-wrap:wrap}.codebox{gap:10px;flex-wrap:wrap}.code{font-size:20px}}
+  </style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar"><div class="brand"><div class="logo">✦</div><span>BLUFF <span style="color:#a78bfa">BATTLE</span></span></div><div class="tag"><i></i> 2–8 PLAYERS · 5 ROUNDS</div></header>
+  <section class="hero"><div class="eyebrow">✧ The ultimate word deception game</div><h1>Can you spot <span class="gradient">the bluff?</span></h1><p>Make up a definition. Convince your friends. Find the real meaning. Your poker face is optional.</p></section>
+  <main class="layout">
+    <section id="mainCard" class="card">
+      <div id="homeView">
+        <h2 style="font-size:22px">Ready to bluff?</h2><p class="muted" style="font-size:13px;margin:7px 0 0">Create a room or join your friends with a code.</p>
+        <div class="form"><label for="name">Your name</label><input id="name" class="input" maxlength="18" placeholder="e.g. Word Wizard" autocomplete="nickname"/><div class="room-row"><button id="createBtn" class="btn">✦ &nbsp; Create a room</button><button id="showJoin" class="btn secondary">Join with a code</button></div><p id="connectStatus" class="connect-status hidden" role="status" aria-live="polite"></p><div id="joinBox" class="hidden"><label for="roomCode">Room code</label><div style="display:flex;gap:9px"><input id="roomCode" class="input" maxlength="6" placeholder="ABC123" style="text-transform:uppercase;letter-spacing:.12em"/><button id="joinBtn" class="btn small">Join</button></div></div></div>
+        <div class="how"><h3>How to play</h3><div class="steps"><div class="step"><span class="num">1</span><span>Everyone gets an unusual word. Write a believable fake definition before time runs out.</span></div><div class="step"><span class="num">2</span><span>Read every definition and secretly vote for the one you think is real. No voting for your own!</span></div><div class="step"><span class="num">3</span><span>Earn <b style="color:#d5c1ff">2 points</b> for every friend fooled by your fake, or <b style="color:#80e7ec">1 point</b> for finding the real meaning.</span></div></div><div class="score-note">🏆 &nbsp;After 5 rounds, the player with the most points wins. Let the bluffing begin!</div></div>
+      </div>
+      <div id="lobbyView" class="hidden"><div class="row-between"><div><div class="eyebrow">Waiting room</div><h2 style="margin-top:7px">Invite your crew</h2></div><span id="connection" class="connection live">● Connected</span></div><p class="muted" style="font-size:13px;line-height:1.6">Share the room code so everyone can join from their own device.</p><div class="codebox"><span id="roomCodeDisplay" class="code">ABC123</span><button id="copyBtn" class="btn secondary small">Copy code</button></div><div class="row-between" style="margin:19px 0 11px"><h3 style="font-size:14px">Players</h3><span id="playerCount" class="muted" style="font-size:12px">1 / 8</span></div><div id="players" class="players"></div><div style="margin-top:19px"><button id="startBtn" class="btn" style="width:100%">Start game</button><p id="startHint" class="fine" style="text-align:center;margin:10px 0 0">At least 2 players are needed to start.</p><button id="leaveBtn" class="btn secondary" style="width:100%;margin-top:12px">Leave room · start fresh</button></div></div>
+      <div id="gameView" class="hidden"></div>
+    </section>
+    <aside class="aside"><section class="card"><h3>Sample words</h3><div class="sample"><b>Petrichor</b><span>After-rain smell</span></div><div class="sample"><b>Apricity</b><span>Winter sun warmth</span></div><div class="sample"><b>Susurrus</b><span>Soft rustling sound</span></div><div class="sample"><b>Quincunx</b><span>Five-point pattern</span></div><p class="fine" style="margin:13px 0 0">Words are built in. New ones rotate each round; no setup needed.</p></section><section class="card"><h3>Scoreboard</h3><div id="leaderboard" class="leader-list"><div class="fine">Scores appear once you join a room.</div></div></section></aside>
+  </main><footer class="footer">Made for curious minds and convincing liars.</footer>
+</div><div id="toast" class="toast hidden"></div>
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  let ws, state, myId = localStorage.getItem('bluffPlayerId'), toastTimer;
+  const nameInput = $('name');
+  if (localStorage.getItem('bluffName')) nameInput.value = localStorage.getItem('bluffName');
+  const showToast = (msg) => { $('toast').textContent = msg; $('toast').classList.remove('hidden'); clearTimeout(toastTimer); toastTimer = setTimeout(()=>$('toast').classList.add('hidden'), 3600); };
+  const setConnectStatus = (message) => { const el=$('connectStatus'); if(!el)return; el.textContent=message; el.classList.toggle('hidden',!message); };
+  const esc = (s) => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const API_URL = '/.netlify/functions/game';
+  let pollTimer = null, pendingAction = false;
+  const newRequestId = () => crypto.randomUUID ? crypto.randomUUID() : 'req-' + Date.now() + '-' + Math.random().toString(16).slice(2);
+  async function apiRequest(method, payload, query) {
+    const url = method === 'GET' ? API_URL + '?' + new URLSearchParams(query) : API_URL;
+    const response = await fetch(url, {
+      method,
+      headers: method === 'POST' ? { 'content-type': 'application/json' } : undefined,
+      body: method === 'POST' ? JSON.stringify(payload) : undefined,
+      cache: 'no-store'
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const error = new Error(data.error || 'The game service could not complete that request.');
+      error.status = response.status; error.code = data.code;
+      throw error;
+    }
+    return data;
+  }
+  function acceptState(next) {
+    if (!next) return;
+    const previous=state;
+    if (previous && JSON.stringify(previous)===JSON.stringify(next)) return;
+    state=next;
+    if(state.you){myId=state.you;localStorage.setItem('bluffPlayerId',myId);localStorage.setItem('bluffRoomCode',state.code);}
+    if(onlyClockChanged(previous,state)) updateClock(); else render();
+  }
+  function setConnectionStatus(connected) {
+    const el=$('connection');
+    if(!el)return;
+    el.textContent=connected?'● Connected':'● Reconnecting';
+    el.classList.toggle('live',connected);
+  }
+  function clearRoomSession() {
+    clearTimeout(pollTimer); pollTimer=null; myId=null; state=null;
+    localStorage.removeItem('bluffPlayerId'); localStorage.removeItem('bluffRoomCode');
+  }
+  function finishLeave() {
+    clearRoomSession(); setConnectStatus(''); render();
+    showToast('You left the room. Create or join another room.');
+  }
+  async function pollRoom() {
+    if(!myId||!state?.code)return;
+    try {
+      const data=await apiRequest('GET',null,{code:state.code,playerId:myId});
+      acceptState(data.state); setConnectionStatus(true);
+    } catch(error) {
+      setConnectionStatus(false);
+      if(error.status===404||error.status===410){clearRoomSession();render();showToast(error.message);}
+    } finally {
+      if(myId&&state?.code)pollTimer=setTimeout(pollRoom,1000);
+    }
+  }
+  function startPolling() {
+    clearTimeout(pollTimer);
+    pollTimer=setTimeout(pollRoom,1000);
+  }
+  async function connect(payload) {
+    setConnectStatus(payload.type==='create'?'Creating room…':'Joining room…');
+    localStorage.setItem('bluffName',nameInput.value.trim());
+    const storageKey=payload.type==='create'?'bluffCreateRequestId':'bluffJoinRequestId';
+    const requestId=localStorage.getItem(storageKey)||newRequestId();
+    localStorage.setItem(storageKey,requestId);
+    try {
+      const data=await apiRequest('POST',{...payload,requestId});
+      localStorage.removeItem(storageKey);
+      acceptState(data.state); setConnectStatus(''); setConnectionStatus(true); startPolling();
+    } catch(error) {
+      setConnectStatus('');
+      if(error.code==='room_code_collision')localStorage.removeItem(storageKey);
+      showToast(error.message);
+    }
+  }
+  async function send(type,extra={}) {
+    if(pendingAction||!state||!myId)return;
+    pendingAction=true;
+    try {
+      const data=await apiRequest('POST',{type,code:state.code,playerId:myId,requestId:newRequestId(),...extra});
+      if(data.left)finishLeave();
+      else acceptState(data.state);
+    } catch(error) {
+      showToast(error.message);
+      if(error.status===404||error.status===410){clearRoomSession();render();}
+    } finally {pendingAction=false;}
+  }  $('createBtn').onclick=()=>{ if(!nameInput.value.trim())return showToast('Enter your name first.'); connect({type:'create',name:nameInput.value}); };
+  $('showJoin').onclick=()=>{ $('joinBox').classList.toggle('hidden'); $('roomCode').focus(); };
+  $('joinBtn').onclick=()=>{ if(!nameInput.value.trim())return showToast('Enter your name first.'); const code=$('roomCode').value.trim().toUpperCase(); if(code.length<4)return showToast('Enter the room code from your host.'); connect({type:'join',name:nameInput.value,code}); };
+  $('roomCode').addEventListener('keydown',e=>{if(e.key==='Enter')$('joinBtn').click();});
+  $('copyBtn').onclick=async()=>{try{await navigator.clipboard.writeText(state.code);$('copyBtn').textContent='Copied!';setTimeout(()=>$('copyBtn').textContent='Copy code',1500);}catch{$('copyBtn').textContent=state.code;}};
+  $('startBtn').onclick=()=>send('start');
+  function leaveRoom() { if(!confirm('Leave this room and return to the start screen?')) return; send('leave'); }
+  function onlyClockChanged(previous,next) {
+    if(!previous||!next||next.phase==='reveal'||next.phase==='finished'||previous.secondsLeft===next.secondsLeft)return false;
+    const before={...previous},after={...next}; delete before.secondsLeft; delete after.secondsLeft;
+    return JSON.stringify(before)===JSON.stringify(after);
+  }
+  function updateClock() {
+    const timer=$('gameView').querySelector('.timer'); if(!timer)return render();
+    const time=state.secondsLeft||0,total=state.phase==='vote'?35:60,pct=Math.max(0,Math.min(100,(time/total)*100));
+    timer.querySelector('span').textContent=time; timer.style.setProperty('--progress',pct+'%');
+  }
+  function render() {
+    const oldInput=$('definition');
+    const draft=state.phase==='submit'&&!state.submitted&&oldInput?{value:oldInput.value,focused:document.activeElement===oldInput,start:oldInput.selectionStart,end:oldInput.selectionEnd,direction:oldInput.selectionDirection}:null;
+    $('homeView').classList.toggle('hidden', !!state); $('lobbyView').classList.toggle('hidden', !state || state.phase!=='lobby'); $('gameView').classList.toggle('hidden', !state || state.phase==='lobby');
+    if(!state)return;
+    if(state.you) { myId=state.you; localStorage.setItem('bluffPlayerId',myId); localStorage.setItem('bluffRoomCode',state.code); }
+    if(state.phase==='lobby') { $('roomCodeDisplay').textContent=state.code; $('playerCount').textContent=`${state.players.length} / 8`; $('players').innerHTML=state.players.map(p=>`<div class="player"><span>${esc(p.name)} ${p.id===myId?'<span class="you">YOU</span>':''}</span>${p.isHost?'<span class="host">HOST</span>':''}</div>`).join(''); const host=state.hostId===myId; $('startBtn').disabled=!host||state.players.length<2; $('leaveBtn').onclick=leaveRoom; $('startBtn').textContent=host?'Start game':'Waiting for host…'; $('startHint').textContent=state.players.length<2?'At least 2 players are needed to start.':host?'Everyone is here? Let’s go!':'The host will start the game when ready.'; return; }
+    $('leaderboard').innerHTML=[...state.players].sort((a,b)=>b.score-a.score).map((p,i)=>`<div class="leader"><span class="rank">${i===0?'✦':String(i+1).padStart(2,'0')}</span><span class="leader-name">${esc(p.name)}${p.id===myId?'<span class="you">YOU</span>':''}</span><span class="leader-score">${p.score}</span></div>`).join('');
+    const host=state.hostId===myId, time=state.secondsLeft||0, total=state.phase==='vote'?35:60, pct=Math.max(0,Math.min(100,(time/total)*100));
+    let html=`<div class="gamehead"><span class="round-badge">ROUND ${state.round} / 5</span><span class="phase-badge">${state.phase==='submit'?'✎ Make your bluff':state.phase==='vote'?'◉ Cast your vote':state.phase==='reveal'?'✦ The reveal':'🏆 Final results'}</span><div class="timer" style="--progress:${pct}%"><span>${time}</span></div></div>`;
+    if(state.phase==='submit') { html+=`<h2 class="word">${esc(state.word)}</h2><p class="hint">What does this unusual word mean? Write a convincing fake.<br>Everyone’s fakes are mixed with the real answer.</p><div class="gamepanel"><h3>Your fake definition</h3><p style="margin:0 0 12px">Make it sound plausible. The more convincing, the better.</p>${state.submitted?'<div class="waiting">✓ Bluff submitted! Waiting for the other players…</div>':`<textarea id="definition" class="input textarea" maxlength="150" placeholder="A believable (or wildly convincing) definition…"></textarea><div class="row-between" style="margin-top:11px"><span class="counter"><span id="charCount">0</span> / 150</span><button id="submitBtn" class="btn small">Submit bluff →</button></div>`}<p class="fine" style="margin:13px 0 0">${state.submissionCount} of ${state.players.length} bluffs submitted · auto-advances when everyone’s ready</p></div>`; }
+    if(state.phase==='vote') { html+=`<h2 class="word">${esc(state.word)}</h2><p class="hint">Which definition is the real one? Your own bluff is marked and can’t be selected.</p><div class="entry-list">${state.entries.map((e,i)=>`<button class="entry" data-entry="${e.id}" ${e.own||state.voted?'disabled':''}><span class="entry-letter">${String.fromCharCode(65+i)}</span><span class="entry-text">${esc(e.text)}${e.own?'<br><small style="color:#c0aafa">Your bluff</small>':''}</span></button>`).join('')}</div>${state.voted?`<div class="waiting">✓ Vote locked in. Waiting for the other players…</div>`:`<p class="fine" style="text-align:center;margin:13px 0 0">${state.voteCount} of ${state.players.length} votes cast · votes are anonymous</p>`}`; }
+    if(state.phase==='reveal') { html+=`<div class="winner"><div class="eyebrow">Round ${state.round} complete</div><h2>Here’s the truth</h2></div><div class="reveal-real"><strong>✓ Real definition</strong>${esc(state.definition)}</div><div style="margin-top:19px"><h3 style="font-size:14px;margin-bottom:10px">All the answers</h3>${state.entries.map(e=>`<div class="reveal-entry" style="${e.isReal?'border-color:#32745f':''}">${esc(e.text)}<small>${e.isReal?'✦ Real definition':`Bluffed by ${esc(e.author)}`} · ${e.votes} vote${e.votes===1?'':'s'}${e.voters.length?` · picked by ${e.voters.map(esc).join(', ')}`:''}</small></div>`).join('')}</div><div class="waiting">${(state.result||[]).filter(x=>x.points).map(x=>`${esc(x.name)} +${x.points}`).join(' · ')||'No points scored this round.'} ${state.round<5?`<br>Next round starts in ${time}s${host?' · or start it now':''}`:''}</div>${host&&state.round<5?'<button id="nextBtn" class="btn small" style="width:100%;margin-top:12px">Next round →</button>':''}`; }
+    if(state.phase==='finished') { html+=`<div class="winner"><div class="trophy">🏆</div><div class="eyebrow">Game over · 5 rounds</div><h2>${state.winner.map(esc).join(' & ')} ${state.winner.length===1?'wins!':'tie!'}</h2><p>What a battle of wits. The final scores are in.</p></div><div class="leader-list">${[...state.players].sort((a,b)=>b.score-a.score).map((p,i)=>`<div class="leader"><span class="rank">${i===0?'✦':String(i+1).padStart(2,'0')}</span><span class="leader-name">${esc(p.name)}</span><span class="leader-score">${p.score} pts</span></div>`).join('')}</div>${host?'<button id="againBtn" class="btn" style="width:100%;margin-top:18px">Play again</button>':''}`; }
+    html+='<button id="leaveBtn" class="btn secondary" style="width:100%;margin-top:18px">Leave room · start fresh</button>';
+    $('gameView').innerHTML=html;
+    $('leaveBtn').onclick=leaveRoom;
+    if(state.phase==='submit'&&!state.submitted) { const input=$('definition'); if(draft){input.value=draft.value;$('charCount').textContent=draft.value.length;if(draft.focused){input.focus({preventScroll:true});input.setSelectionRange(draft.start,draft.end,draft.direction);}} input.oninput=()=>$('charCount').textContent=input.value.length; $('submitBtn').onclick=()=>send('submit',{text:input.value}); input.onkeydown=e=>{if((e.ctrlKey||e.metaKey)&&e.key==='Enter')send('submit',{text:input.value});}; }
+    if(state.phase==='vote'&&!state.voted) $('gameView').querySelectorAll('[data-entry]').forEach(btn=>btn.onclick=()=>send('vote',{entryId:btn.dataset.entry}));
+    if($('nextBtn'))$('nextBtn').onclick=()=>send('next'); if($('againBtn'))$('againBtn').onclick=()=>send('playAgain');
+  }
+  async function resumeRoom() {
+    const code=localStorage.getItem('bluffRoomCode');
+    if(!myId||!code)return;
+    setConnectionStatus(false);
+    try {
+      const data=await apiRequest('GET',null,{code,playerId:myId});
+      acceptState(data.state); setConnectionStatus(true); startPolling();
+    } catch(error) {
+      clearRoomSession(); render(); showToast(error.message);
+    }
+  }
+  if(myId && localStorage.getItem('bluffRoomCode')) resumeRoom();
+})();
+</script>
+</body>
+</html>

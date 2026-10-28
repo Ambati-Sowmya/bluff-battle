@@ -1,0 +1,10 @@
+[build]
+  publish = "public"
+  command = "node test-game.js && node --test test-netlify-game.mjs"
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+[dev]
+  port = 8888

@@ -1,0 +1,21 @@
+{
+  "name": "bluff-battle",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A real-time room-code word deception party game, with legacy Node and Netlify backends",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "netlify dev --port 8888",
+    "build": "netlify build",
+    "test": "node test-game.js && node --test test-netlify-game.mjs"
+  },
+  "dependencies": {
+    "@netlify/blobs": "^11.1.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^27.15.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
