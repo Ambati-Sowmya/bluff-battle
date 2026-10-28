@@ -12,9 +12,6 @@
   "dependencies": {
     "@netlify/blobs": "^11.1.7"
   },
-  "devDependencies": {
-    "netlify-cli": "^27.15.0"
-  },
   "engines": {
     "node": ">=20"
   }
